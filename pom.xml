@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>dev.pioruocco</groupId>
-    <artifactId>Tutorial_Web_Service_Response_Optional</artifactId>
+    <artifactId>SkillForge</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>Tutorial_Web_Service_Response_Optional</name>
-    <description>Tutorial_Web_Service_Response_Optional</description>
+    <name>SkillForge</name>
+    <description>SkillForge application</description>
     <properties>
         <java.version>17</java.version>
     </properties>
@@ -31,8 +31,8 @@
         </dependency>
 
         <dependency>
-            <groupId>com.mysql</groupId>
-            <artifactId>mysql-connector-j</artifactId>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
             <scope>runtime</scope>
         </dependency>
         <dependency>

@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    container_name: skillforge_postgres
+    environment:
+      POSTGRES_DB: skillforge
+      POSTGRES_USER: skillforge_user
+      POSTGRES_PASSWORD: skillforge_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  # Uncomment if you want to run the backend in docker as well
+  # backend:
+  #   build: .
+  #   container_name: skillforge_backend
+  #   ports:
+  #     - "8080:8080"
+  #   depends_on:
+  #     - db
+  #   environment:
+  #     SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/skillforge
+  #     SPRING_DATASOURCE_USERNAME: skillforge_user
+  #     SPRING_DATASOURCE_PASSWORD: skillforge_password
+
+volumes:
+  postgres_data:
